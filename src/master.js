@@ -1,6 +1,10 @@
 const { Master } = require('discord-rose')
 const AutoPoster = require('topgg-autoposter')
 
+const { Interface } = require('interface')
+
+const int = new Interface()
+
 const path = require('path')
 
 const config = require('../config.json')
@@ -16,6 +20,8 @@ const master = new Master(path.resolve(__dirname, './worker.js'), {
     guilds: []
   }
 })
+
+int.setupMaster(master, 'ti84')
 
 AutoPoster(config.dbl, master)
   .on('posted', () => {
