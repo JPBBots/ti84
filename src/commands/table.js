@@ -6,7 +6,21 @@ const { deadTest, getTable, RED } = require('../utils')
 const command = {
   command: 'table',
   aliases: ['t'],
+  interaction: {
+    name: 'table',
+    description: 'Gets the table for an expression',
+    options: [{
+      name: 'expression',
+      description: 'Expression to make a table for',
+      required: true,
+      type: 3
+    }]
+  },
   exec: async (ctx) => {
+    if (ctx.isInteraction) {
+      ctx.args = [ctx.options.expression]
+    }
+
     const r = deadTest(ctx.args.join(' '))
     if (r[0]) {
       return ctx.embed

@@ -3,6 +3,10 @@
  */
 const command = {
   command: 'use',
+  interaction: {
+    name: 'use',
+    description: 'Lists usable expressions for graph, calculate, and table command'
+  },
   exec: (ctx) => {
     ctx.embed
       .title('How to use')
@@ -16,7 +20,7 @@ const command = {
       .field('PI (3.141592 etc.)', 'Use `pi` to signify PI, Ex: `3+pi => 6.141592653589793 etc.`')
       .field("Euler's Number (2.71828 etc.)", 'Use `e` to signify eulers number, Ex: `3+e` => `5.71828 etc.`')
       .footer('Usable on the ti-graph, ti-calc & ti-table commands')
-      .send()
+      .send(false, false, true)
   }
 }
 module.exports = command

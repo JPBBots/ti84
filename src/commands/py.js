@@ -5,7 +5,26 @@ const { RED } = require('../utils')
  */
 const command = {
   command: 'py',
+  interaction: {
+    name: 'pythagorean',
+    description: 'Calculates two numbers with the pythagorean theorem',
+    options: [{
+      name: 'a',
+      description: 'The a number',
+      required: true,
+      type: 4
+    }, {
+      name: 'b',
+      description: 'The b number',
+      required: true,
+      type: 4
+    }]
+  },
   exec: (ctx) => {
+    if (ctx.isInteraction) {
+      ctx.args = [ctx.options.a, ctx.options.b]
+    }
+
     let [a, b] = ctx.args
     a = Number(a)
     b = Number(b)
