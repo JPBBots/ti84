@@ -1,7 +1,7 @@
 /**
  * @type {import('discord-rose').CommandOptions}
  */
-const command = {
+module.exports = {
   command: 'help',
   interaction: {
     name: 'help',
@@ -23,4 +23,3 @@ const command = {
       .send()
   }
 }
-module.exports = command

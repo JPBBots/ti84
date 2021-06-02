@@ -3,7 +3,7 @@ const { deadTest, getTable, RED } = require('../utils')
 /**
  * @type {import('discord-rose').CommandOptions}
  */
-const command = {
+module.exports = {
   command: 'table',
   aliases: ['t'],
   interaction: {
@@ -42,4 +42,3 @@ const command = {
       .send()
   }
 }
-module.exports = command

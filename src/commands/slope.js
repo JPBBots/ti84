@@ -3,7 +3,7 @@ const { RED } = require('../utils')
 /**
  * @type {import('discord-rose').CommandOptions}
  */
-const command = {
+module.exports = {
   command: 'slope',
   interaction: {
     name: 'slope',
@@ -58,4 +58,3 @@ const command = {
       .send()
   }
 }
-module.exports = command

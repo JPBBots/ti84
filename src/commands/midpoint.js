@@ -3,7 +3,7 @@ const { RED } = require('../utils')
 /**
  * @type {import('discord-rose').CommandOptions}
  */
-const command = {
+module.exorts = {
   command: 'midpoint',
   interaction: {
     name: 'midpoint',
@@ -31,7 +31,7 @@ const command = {
       description: 'Y(2)',
       required: true,
       type: 4
-    }] 
+    }]
   },
   aliases: ['mid'],
   exec: (ctx) => {
@@ -60,4 +60,3 @@ const command = {
       .send()
   }
 }
-module.exports = command

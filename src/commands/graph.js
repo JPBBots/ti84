@@ -3,7 +3,7 @@ const { deadTest, RED } = require('../utils')
 /**
  * @type {import('discord-rose').CommandOptions}
  */
-const command = {
+module.exports = {
   command: 'graph',
   interaction: {
     name: 'graph',
@@ -35,4 +35,3 @@ const command = {
       .send()
   }
 }
-module.exports = command
