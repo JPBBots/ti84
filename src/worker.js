@@ -10,6 +10,8 @@ int.setupWorker(worker)
 
 worker.setStatus('watching', 'The Calculator')
 
+global.ROSE_DEFAULT_EMBED.color = 0x2f3136
+
 worker.commands
   .prefix('ti-')
   .load(path.resolve(__dirname, './commands'))

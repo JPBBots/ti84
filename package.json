@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/JPBBots/ti84#readme",
   "dependencies": {
-    "discord-rose": "^1.4.0",
+    "discord-rose": "github:discord-rose/discord-rose#build",
     "interface": "github:jpbbots/interface",
     "topgg-autoposter": "^1.1.10"
   }
