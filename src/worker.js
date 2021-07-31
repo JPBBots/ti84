@@ -1,12 +1,23 @@
 const path = require('path')
-const { Interface } = require('interface')
+const { Interface } = require('@jpbbots/interface')
 
 const int = new Interface()
 
-const { Worker } = require('discord-rose')
+const { SingleWorker } = require('discord-rose')
+const config = require('../config.json')
 
-const worker = new Worker()
-int.setupWorker(worker)
+const worker = new SingleWorker({
+  token: config.token,
+  cache: {
+    channels: false,
+    roles: false,
+    self: false
+  },
+  cacheControl: {
+    guilds: []
+  }
+})
+int.setupSingleton(worker)
 
 worker.setStatus('watching', 'The Calculator')
 
