@@ -17,7 +17,7 @@ const worker = new SingleWorker({
     guilds: []
   }
 })
-int.setupSingleton(worker)
+int.setupSingleton(worker, 'ti84')
 
 worker.setStatus('watching', 'The Calculator')
 
