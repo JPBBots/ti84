@@ -1,3 +1,3 @@
-import { ti84 } from './ti84'
+import { TI84 } from './TI84'
 
-new ti84()
+new TI84()

@@ -14,7 +14,7 @@ import { SlopeCommand } from './commands/Slope'
 import { SupportCommand } from './commands/Support'
 import { TableCommand } from './commands/Table'
 
-export class ti84 extends SingleWorker {
+export class TI84 extends SingleWorker {
   int = new Interface()
 
   cmd = new CommandHandler(this, [
@@ -47,7 +47,7 @@ export class ti84 extends SingleWorker {
 
     this.setStatus('watching', 'The Calculator')
 
-    this.int.setupSingleton(this, 'famousbirthdays')
+    this.int.setupSingleton(this, 'ti84')
 
     this.int.commands.setupOldCommand(
       ['ti-'],

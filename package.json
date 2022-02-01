@@ -4,7 +4,9 @@
   "description": "Calculator Discord Bot",
   "main": "dist/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm i && tsc",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -20,9 +22,10 @@
     "@jadl/cmd": "^0.2.3",
     "@jadl/embed": "^0.0.3",
     "@jpbbots/interface": "^2.2.1",
-    "discord-api-types": "^0.26.1",
     "jadl": "^0.1.6",
-    "topgg-autoposter": "^1.1.10",
     "undici": "^4.13.0"
+  },
+  "devDependencies": {
+    "discord-api-types": "^0.26.1"
   }
 }
