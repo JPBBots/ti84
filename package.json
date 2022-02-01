@@ -2,7 +2,7 @@
   "name": "ti84",
   "version": "1.0.0",
   "description": "Calculator Discord Bot",
-  "main": "src/worker.js",
+  "main": "dist/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,8 +17,12 @@
   },
   "homepage": "https://github.com/JPBBots/ti84#readme",
   "dependencies": {
-    "@jpbbots/interface": "^1.0.6",
-    "discord-rose": "^1.5.0",
-    "topgg-autoposter": "^1.1.10"
+    "@jadl/cmd": "^0.2.3",
+    "@jadl/embed": "^0.0.3",
+    "@jpbbots/interface": "^2.2.1",
+    "discord-api-types": "^0.26.1",
+    "jadl": "^0.1.6",
+    "topgg-autoposter": "^1.1.10",
+    "undici": "^4.13.0"
   }
 }

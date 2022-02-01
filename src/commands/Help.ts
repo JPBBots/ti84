@@ -1,14 +1,12 @@
-/**
- * @type {import('discord-rose').CommandOptions}
- */
-module.exports = {
-  command: 'use',
-  interaction: {
-    name: 'use',
-    description: 'Lists usable expressions for graph, calculate, and table command'
-  },
-  exec: (ctx) => {
-    ctx.embed
+import { Command, Run, Options } from '@jadl/cmd'
+import { Embed } from '@jadl/embed'
+import { deadTest } from '../utils'
+
+@Command('help', 'Lists usable expressions for the graph, calculaate, and table commands')
+export class HelpCommand {
+  @Run()
+  async graph () {
+    return new Embed()
       .title('How to use')
       .field('Addition/Subtraction', 'Same as real world. Ex: `3+3 => 6` and `3-3 => 0`')
       .field('Multiplication', 'Use the `*` symbol. Ex: `3*3 => 9`')
@@ -19,7 +17,6 @@ module.exports = {
       .field('Random Value', 'Use `rand` to signify a random value every X, Ex: `3+rand => Random Number Between 3, 13`')
       .field('PI (3.141592 etc.)', 'Use `pi` to signify PI, Ex: `3+pi => 6.141592653589793 etc.`')
       .field("Euler's Number (2.71828 etc.)", 'Use `e` to signify eulers number, Ex: `3+e` => `5.71828 etc.`')
-      .footer('Usable on the ti-graph, ti-calc & ti-table commands')
-      .send(false, false, true)
+      .footer('Usable on the /graph, /calc, and /table commands')
   }
 }
