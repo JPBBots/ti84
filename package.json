@@ -26,6 +26,7 @@
     "undici": "^4.13.0"
   },
   "devDependencies": {
+    "@types/node": "^17.0.14",
     "discord-api-types": "^0.26.1"
   }
 }
